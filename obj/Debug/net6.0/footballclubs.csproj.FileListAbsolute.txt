@@ -1,0 +1,15 @@
+C:\Users\johan\C#Programmer\footballclubs\bin\Debug\net6.0\footballclubs.exe
+C:\Users\johan\C#Programmer\footballclubs\bin\Debug\net6.0\footballclubs.deps.json
+C:\Users\johan\C#Programmer\footballclubs\bin\Debug\net6.0\footballclubs.runtimeconfig.json
+C:\Users\johan\C#Programmer\footballclubs\bin\Debug\net6.0\footballclubs.dll
+C:\Users\johan\C#Programmer\footballclubs\bin\Debug\net6.0\footballclubs.pdb
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.csproj.AssemblyReference.cache
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.AssemblyInfoInputs.cache
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.AssemblyInfo.cs
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.csproj.CoreCompileInputs.cache
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.dll
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\refint\footballclubs.dll
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.pdb
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\footballclubs.genruntimeconfig.cache
+C:\Users\johan\C#Programmer\footballclubs\obj\Debug\net6.0\ref\footballclubs.dll

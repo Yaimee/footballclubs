@@ -1,18 +1,18 @@
 public class Club{
 
-    private int position{ get; set; }
+    public int position{ get; set; }
     public String abbreviation{ get; set; }
 
-    private String name;
-    private int gamesPlayed;
-    private int gamesWon;
-    private int gamesDrawn;
-    private int gamesLost;
-    private int goalsFor;
-    private int goalsAgainst;
-    private int goalDifference;
-    private int points;
-    private String streak;
+    public String name;
+    public int gamesPlayed;
+    public int gamesWon;
+    public int gamesDrawn;
+    public int gamesLost;
+    public int goalsFor;
+    public int goalsAgainst;
+    public int goalDifference;
+    public int points;
+    public String streak;
 
      public Club(int position, String abbreviation, String name, int gamesPlayed, int gamesWon, int gamesDrawn, 
                 int gamesLost, int goalsFor, int goalsAgainst, int goalDifference, int points, String streak) {

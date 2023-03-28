@@ -13,16 +13,24 @@ namespace app{
             
             List<Match> round = initiateRound("1");
 
-            foreach(Match match in round){
-                System.Console.WriteLine(match);
-            }
+            runRound(round);
            
         }
 
 
         static void runRound(List<Match> matches){
             foreach(Match match in matches){
-                
+                if(match.homeClubGoals == match.awayClubGoals){
+                    //Implement draw
+                }
+                else if(match.homeClubGoals > match.awayClubGoals){
+                    //Implement home team win
+                }
+                else{
+                    //Implement away team win
+                }
+
+                //Implement update of all data neccesary
             }
         }
 
@@ -114,6 +122,9 @@ namespace app{
 
 
         private static Club addClub(String[] clubdata){
+
+        
+
             int position = 0;
             String abbreviation = clubdata[0];
             String name = clubdata[1];
@@ -123,8 +134,8 @@ namespace app{
             int gamesLost = 0;
             int goalsFor = 0;
             int goalsAgainst = 0;
-            int goalDifference = 0;
-            int points = 0;
+            int goalDifference = 0; 
+            int points = 0; 
             String streak = "";
 
             Club club = new Club(

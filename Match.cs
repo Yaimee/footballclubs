@@ -1,9 +1,9 @@
 public class Match{
-    private Club homeTeam;
-    private Club awayTeam;
+    public Club homeTeam{ get; set; }
+    public Club awayTeam{ get; set; }
 
-    private int homeClubGoals;
-    private int awayClubGoals;
+    public int homeClubGoals{ get; set; }
+    public int awayClubGoals{ get; set; }
 
     public Match(Club homeTeam, int homeClubGoals, Club awayTeam, int awayClubGoals){
         this.homeTeam = homeTeam;

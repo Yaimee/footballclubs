@@ -1,11 +1,11 @@
 public class League{
-    private String? name;
-    private int UCLPositions;
-    private int UELPositions;
-    private int UECLPositions;
-    private int relegationSpots;
+    public String? name{ get; set; }
+    public int UCLPositions{ get; set; }
+    public int UELPositions{ get; set; }
+    public int UECLPositions{ get; set; }
+    public int relegationSpots{ get; set; }
 
-    private List<Club>? clubs;
+    public List<Club>? clubs{ get; set; }
 
     public League(String name, int UCLPositions, int UELPositions, int UECLPositions, int relegationSpots, List<Club> clubs){
         this.name = name;
@@ -16,8 +16,31 @@ public class League{
         this.clubs = clubs;
     }
 
-    private void sortTeams(){
-        //Skal implementeres
+    private IOrderedEnumerable<Club> getTeamsSorted(){
+        
+        var sortedClubs = clubs
+            .OrderByDescending(c => c.points)
+            .ThenByDescending(c => c.goalDifference)
+            .ThenByDescending(c => c.goalsFor)
+            .ThenBy(c => c.name);
+        
+        int position = 1;
+        Club tempClub = null;
+        foreach(Club club in sortedClubs){
+            club.position = position;
+            if(tempClub != null){
+                bool pointsIsSame = club.points == tempClub.points;
+                bool goalDifIsSame = club.goalDifference == tempClub.goalDifference;
+                bool goalsForIsSame = club.goalsFor == tempClub.goalsFor;
+
+                if(pointsIsSame && goalDifIsSame && goalsForIsSame){
+                    club.position = 100;
+                }
+            }
+            position++;
+            tempClub = club;
+        }
+        return sortedClubs;
     }
     public int longestTeamName(){
         int[] arrLen = new int[12];
@@ -36,7 +59,7 @@ public class League{
                 Maxlength = arrLen[i];
             }
         }
-        System.Console.WriteLine(Maxlength);
+        
         return Maxlength;
     }
     
@@ -69,8 +92,8 @@ public class League{
                             "Pos", "abr", "Club Name", "G", "W", "D", "L", "G+", "G-", "GD", "P", "Streak");
 
         //Sorting the teams by points etc. then adding them to the tostring in the same format as the header.
-        sortTeams();
-        foreach (Club club in clubs){
+        IOrderedEnumerable<Club> sortedClubs =  getTeamsSorted();
+        foreach (Club club in sortedClubs){
             returnString += "\n"+string.Format(formatter(), 
                          club.position, club.abbreviation, club.name, club.gamesPlayed, club.gamesWon, club.gamesDrawn, club.gamesLost, club.goalsFor, 
                          club.goalsAgainst, club.goalDifference, club.points, club.streak);

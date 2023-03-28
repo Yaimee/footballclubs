@@ -1,21 +1,20 @@
 public class Club{
 
-    private int position{ get; set; }
-    public String abbreviation{ get; set; }
+    public int position{ get; set; }
+    public string abbreviation{ get; set; }
+    public string name{ get; set;}
+    public int gamesPlayed{ get; set;}
+    public int gamesWon{ get; set;}
+    public int gamesDrawn{ get; set;}
+    public int gamesLost{ get; set;}
+    public int goalsFor{ get; set;}
+    public int goalsAgainst{ get; set;}
+    public int goalDifference{ get; set;}
+    public int points{ get; set;}
+    public string streak{ get; set;}
 
-    private String name;
-    private int gamesPlayed;
-    private int gamesWon;
-    private int gamesDrawn;
-    private int gamesLost;
-    private int goalsFor;
-    private int goalsAgainst;
-    private int goalDifference;
-    private int points;
-    private String streak;
-
-     public Club(int position, String abbreviation, String name, int gamesPlayed, int gamesWon, int gamesDrawn, 
-                int gamesLost, int goalsFor, int goalsAgainst, int goalDifference, int points, String streak) {
+     public Club(int position, string abbreviation, string name, int gamesPlayed, int gamesWon, int gamesDrawn, 
+                int gamesLost, int goalsFor, int goalsAgainst, int goalDifference, int points, string streak) {
 
         this.position = position;
         this.name = name;
@@ -30,13 +29,4 @@ public class Club{
         this.points = points;
         this.streak = streak;
     }
-
-
-    public override string ToString() {
-    string streakString = string.Join(", ", streak);
-    return string.Format("{0,-5} {1,-5} {2,-30} {3,-3} {4,-3} {5,-3} {6,-3} {7,-3} {8,-3} {9,-3} {10,-3} {11,-10}", 
-                         position, abbreviation, name, gamesPlayed, gamesWon, gamesDrawn, gamesLost, goalsFor, 
-                         goalsAgainst, goalDifference, points, streakString);
-}
-
 }

@@ -11,7 +11,7 @@ namespace app{
             initiateLeague();
             System.Console.WriteLine(superliga);
             
-            List<Match> round = initiateRound("2");
+            List<Match> round = initiateRound("1");
 
             foreach(Match match in round){
                 System.Console.WriteLine(match);

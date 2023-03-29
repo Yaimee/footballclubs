@@ -23,30 +23,38 @@ namespace app{
         }
     }
     class Program{
-
+        static List<League>? leagueList = new List<League>();
         static List<Club> clubs = new List<Club>();
         static League? superliga;
+        static League? upperSuperliga;
+        static League? lowerSuperliga;
         static void Main(){
-            initiateClubs();
+            //initiateClubs();
+            //initiateTestClubs("R22SortingTest");
+            initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
-            System.Console.WriteLine("Testing----------------------------------------");
-            Club myClub = clubs[0];
-            System.Console.WriteLine(myClub.name);
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            System.Console.WriteLine(myClub.streak);
-            myClub.streakSet("L");
-            System.Console.WriteLine(myClub.streak);
-            System.Console.WriteLine("------------------------------------------------");
-            System.Console.WriteLine(superliga);
-            
-            List<Match> round = initiateRound("1");
+            superliga = leagueList[0];
+            upperSuperliga = leagueList[1];
+            lowerSuperliga = leagueList[2];
 
-            runRound(round);
-           
+            superliga.clubs = clubs;
+            //Activate the method from league specificly for that one that takes the clubs 
+            //in that league and split it into 2 list that is returned inside one list 
+            //that then is used to choose where the 2 list goes using index
+            List<Club> upperLeagueClubs = superliga.preliminaryFinish()[0];
+            List<Club> lowerLeagueClubs = superliga.preliminaryFinish()[1];
+            upperSuperliga.clubs = upperLeagueClubs;
+            lowerSuperliga.clubs = lowerLeagueClubs;
+
+
+            System.Console.WriteLine("Testing----------------------------------------");
+            System.Console.WriteLine("------------------------------------------------");
+            //System.Console.WriteLine(superliga);
+            
+            //List<Match> round = initiateRound("1");
+
+            //runRound(round);
+
         }
 
 
@@ -124,6 +132,7 @@ namespace app{
         static void initiateLeague(){
             StreamReader reader = new StreamReader("Files/setup.csv");
             bool isFirstRow = true;
+            List<Club> listOfClubs = new List<Club>();
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();
@@ -134,15 +143,19 @@ namespace app{
                 }
 
                 string[] values = line.Split(';');
-                superliga = new League(
+                League temp = new League(
                     values[0], 
                     Int32.Parse(values[1]), 
                     Int32.Parse(values[2]), 
                     Int32.Parse(values[3]), 
                     Int32.Parse(values[4]), 
-                    clubs
+                    Int32.Parse(values[5]), 
+                    Int32.Parse(values[6]), 
+                    listOfClubs
                     );
+                leagueList.Add(temp);
             }
+            
             reader.Close();
         }
 
@@ -202,8 +215,56 @@ namespace app{
 
             return club;
         }
+        static void initiateTestClubs(string file){
+            StreamReader readerTest = new StreamReader("test/" + file + ".csv");
+            bool isFirstRow = true;
+            while (!readerTest.EndOfStream)
+            {
+                string line = readerTest.ReadLine();
+                if (isFirstRow) // check if this is the first row
+                {
+                    isFirstRow = false; // set the flag to false for all subsequent rows
+                    continue; // skip processing the first row
+                }
+                //System.Console.WriteLine(line);
+                string[] values = line.Split(';');
+                int position = 0;
+                String abbreviation = values[1];
+                String name = values[2];
+                int gamesPlayed = Int32.Parse(values[3]);
+                int gamesWon = Int32.Parse(values[4]);
+                int gamesDrawn = Int32.Parse(values[5]);
+                int gamesLost = Int32.Parse(values[6]);
+                int goalsFor = Int32.Parse(values[7]);
+                int goalsAgainst = Int32.Parse(values[8]);
+                int goalDifference = Int32.Parse(values[9]);
+                int points = Int32.Parse(values[10]);
+                String streak = values[11];
+
+                Club tempClub = new Club(
+                        position, 
+                        abbreviation, 
+                        name, 
+                        gamesPlayed, 
+                        gamesWon, 
+                        gamesDrawn, 
+                        gamesLost, 
+                        goalsFor, 
+                        goalsAgainst, 
+                        goalDifference, 
+                        points, 
+                        streak
+                        );
+
+                clubs.Add(tempClub);
+            }
+            readerTest.Close();
+        }
 
     }
+
+
+    
 }
 
 

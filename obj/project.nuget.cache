@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "7wUGF/BUr2N82B6BbAR9VdshrxKb/BG7Vp8CP8hjcFL0SNISGItGinpJqM1Eq8rSaCA8z58bO6BJ5ZBNfCzxrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\footballclubs.csproj",
@@ -9,5 +10,11 @@
     "C:\\Users\\rasmu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
     "C:\\Users\\rasmu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
   ],
+=======
+  "dgSpecHash": "RvmNdFvB3J21YLrVkXGirah4djZcZ0MrGJ0Xv333ung3sw1m7sWlJIGAxgCHCH9Mnze4YuFZAEfTHetD6YVyXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\udh12\\Desktop\\FootBall\\footballclubs\\footballclubs.csproj",
+  "expectedPackageFiles": [],
+>>>>>>> 3bbaa0273fd7633db71f9088a6f7a6f2b7f6fd9b
   "logs": []
 }

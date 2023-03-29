@@ -1,2 +1,4 @@
-name;UCL positions;UEL positions;UECL positions;Relegation positions
-3F Superliga;1;2;1;2
+name;UCL positions;UEL positions;UECL positions;Relegation positions;upper positions;Lower positions
+3F Superliga;0;0;0;0;6;6
+mesterskabsspillet;1;2;1;0;0;0
+Kvalifikationsspillet;0;0;0;2;0;0

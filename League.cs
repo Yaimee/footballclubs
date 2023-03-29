@@ -4,30 +4,33 @@ public class League{
     public int UELPositions{ get; set; }
     public int UECLPositions{ get; set; }
     public int relegationSpots{ get; set; }
+    public int upperLeagueSpots{ get; set; }
+    public int lowerLeagueSpots{ get; set; }
 
     public List<Club>? clubs{ get; set; }
 
-    public League(String name, int UCLPositions, int UELPositions, int UECLPositions, int relegationSpots, List<Club> clubs){
+    public League(String name, int UCLPositions, int UELPositions, int UECLPositions, int relegationSpots, int upperLeagueSpots, int lowerLeagueSpots, List<Club> clubs){
         this.name = name;
         this.UCLPositions = UCLPositions;
         this.UELPositions = UELPositions;
         this.UECLPositions = UECLPositions;
         this.relegationSpots = relegationSpots;
+        this.upperLeagueSpots = upperLeagueSpots;
+        this.lowerLeagueSpots = lowerLeagueSpots;
         this.clubs = clubs;
     }
 
-    private IOrderedEnumerable<Club> getTeamsSorted(){
+    private void sortTeams(){
+        clubs = clubs.OrderByDescending(c => c.points)
+             .ThenByDescending(c => c.goalDifference)
+             .ThenByDescending(c => c.goalsFor)
+             .ThenBy(c => c.name)
+             .ToList();
         
-        var sortedClubs = clubs
-            .OrderByDescending(c => c.points)
-            .ThenByDescending(c => c.goalDifference)
-            .ThenByDescending(c => c.goalsFor)
-            .ThenBy(c => c.name);
-        
-        int position = 1;
         Club tempClub = null;
-        foreach(Club club in sortedClubs){
-            club.position = position;
+        for(int i = 0; i < clubs.Count; i++){
+            Club club = clubs[i];
+            club.position = i + 1;
             if(tempClub != null){
                 bool pointsIsSame = club.points == tempClub.points;
                 bool goalDifIsSame = club.goalDifference == tempClub.goalDifference;
@@ -37,11 +40,11 @@ public class League{
                     club.position = 100;
                 }
             }
-            position++;
             tempClub = club;
         }
-        return sortedClubs;
     }
+
+
     public int longestTeamName(){
         int[] arrLen = new int[12];
         int j = 0;
@@ -62,7 +65,19 @@ public class League{
         
         return Maxlength;
     }
-    
+    public List<List<Club>> preliminaryFinish(){
+        List<List<Club>> listOfClubs = new List<List<Club>>();
+        List<Club> upperLeagueClubs = new List<Club>();
+        List<Club> lowerLeagueClubs = new List<Club>();
+        
+        sortTeams();
+        upperLeagueClubs = clubs.GetRange(0,6);
+        lowerLeagueClubs = clubs.GetRange(6,6);
+
+        listOfClubs.Add(upperLeagueClubs);
+        listOfClubs.Add(lowerLeagueClubs);
+        return listOfClubs;
+    }
     public string formatter(){
         //{posistion, reserved Characters}
         string posFormat = "{0,-5}";
@@ -92,13 +107,16 @@ public class League{
                             "Pos", "abr", "Club Name", "G", "W", "D", "L", "G+", "G-", "GD", "P", "Streak");
 
         //Sorting the teams by points etc. then adding them to the tostring in the same format as the header.
-        IOrderedEnumerable<Club> sortedClubs =  getTeamsSorted();
-        foreach (Club club in sortedClubs){
+        sortTeams();
+        if(clubs.Count != null){
+            foreach (Club club in clubs){
             String pos = club.position == 100? "-" : club.position.ToString();
             returnString += "\n"+string.Format(formatter(), 
                          pos, club.abbreviation, club.name, club.gamesPlayed, club.gamesWon, club.gamesDrawn, club.gamesLost, club.goalsFor, 
                          club.goalsAgainst, club.goalDifference, club.points, club.streak);
+            }
         }
+        
 
         
         return returnString;

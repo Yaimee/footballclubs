@@ -10,6 +10,18 @@ namespace app{
             //initiateClubs();
             initiateTestClubs();
             initiateLeague();
+            System.Console.WriteLine("Testing----------------------------------------");
+            Club myClub = clubs[0];
+            System.Console.WriteLine(myClub.name);
+            myClub.streakSet("W");
+            myClub.streakSet("W");
+            myClub.streakSet("W");
+            myClub.streakSet("W");
+            myClub.streakSet("W");
+            System.Console.WriteLine(myClub.streak);
+            myClub.streakSet("L");
+            System.Console.WriteLine(myClub.streak);
+            System.Console.WriteLine("------------------------------------------------");
             System.Console.WriteLine(superliga);
             
             //List<Match> round = initiateRound("1");

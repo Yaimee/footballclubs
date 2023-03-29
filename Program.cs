@@ -9,9 +9,9 @@ namespace app{
         static League? upperSuperliga;
         static League? lowerSuperliga;
         static void Main(){
-            //initiateClubs();
+            initiateClubs();
             //initiateTestClubs("R22SortingTest");
-            initiateTestClubs("R22SortingTestEqualPoints");
+            //initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
             System.Console.WriteLine("Testing----------------------------------------");
             

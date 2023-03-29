@@ -50,12 +50,12 @@ namespace app{
             System.Console.WriteLine("Testing----------------------------------------");
 
             System.Console.WriteLine("------------------------------------------------");
-            System.Console.WriteLine(superliga);
-            System.Console.WriteLine(upperSuperliga);
-            System.Console.WriteLine(lowerSuperliga);
+            //System.Console.WriteLine(superliga);
+            //System.Console.WriteLine(upperSuperliga);
+            //System.Console.WriteLine(lowerSuperliga);
             //List<Match> round = initiateRound("1");
             runRounds();
-            System.Console.WriteLine(superliga);
+            //System.Console.WriteLine(superliga);
             
             //
 
@@ -70,6 +70,12 @@ namespace app{
                 foreach(string file in files) {
                     List<Match> round = initiateRound(i);
                     runRound(round);
+                    if(i <= 22) {
+                        Console.WriteLine("-----------------------------------------------------------------------------\n\n" + superliga + "\n");
+                    } else {
+                        Console.WriteLine("------------------------------------------------------------\n\n" + upperSuperliga);
+                        Console.WriteLine("\n" + lowerSuperliga + "\n");
+                    }
                     i++;
                 }
             } catch (Exception e) {
@@ -124,7 +130,6 @@ namespace app{
             {
                 string line = reader.ReadLine();
                 string[] values = line.Split(',');
-                Console.WriteLine(values[0]);
                 Match tempMatch = getMatch(values);
                 matches.Add(tempMatch);
             }

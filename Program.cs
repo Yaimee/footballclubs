@@ -2,8 +2,28 @@
 
 
 namespace app{
-    class Program{
+    struct Match {
+        public Club homeTeam{ get; set; }
+        public Club awayTeam{ get; set; }
 
+        public int homeClubGoals{ get; set; }
+        public int awayClubGoals{ get; set; }
+
+        public Match(Club homeTeam, int homeClubGoals, Club awayTeam, int awayClubGoals){
+            this.homeTeam = homeTeam;
+            this.awayTeam = awayTeam;
+            this.homeClubGoals = homeClubGoals;
+            this.awayClubGoals = awayClubGoals;
+        }
+        
+
+        public override string ToString()
+        {
+            return $"{homeTeam.abbreviation} {homeClubGoals}-{awayClubGoals} {awayTeam.abbreviation}";
+        }
+    }
+    class Program{
+        static List<League>? leagueList = new List<League>();
         static List<Club> clubs = new List<Club>();
         static League? superliga;
         static League? upperSuperliga;
@@ -13,10 +33,23 @@ namespace app{
             //initiateTestClubs("R22SortingTest");
             //initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
+            superliga = leagueList[0];
+            upperSuperliga = leagueList[1];
+            lowerSuperliga = leagueList[2];
+
+            superliga.clubs = clubs;
+            //Activate the method from league specificly for that one that takes the clubs 
+            //in that league and split it into 2 list that is returned inside one list 
+            //that then is used to choose where the 2 list goes using index
+            List<Club> upperLeagueClubs = superliga.preliminaryFinish()[0];
+            List<Club> lowerLeagueClubs = superliga.preliminaryFinish()[1];
+            upperSuperliga.clubs = upperLeagueClubs;
+            lowerSuperliga.clubs = lowerLeagueClubs;
+
+
             System.Console.WriteLine("Testing----------------------------------------");
-            
             System.Console.WriteLine("------------------------------------------------");
-            System.Console.WriteLine(superliga);
+            //System.Console.WriteLine(superliga);
             
             //List<Match> round = initiateRound("1");
 
@@ -27,14 +60,35 @@ namespace app{
 
         static void runRound(List<Match> matches){
             foreach(Match match in matches){
+                string HTAbbreviation = match.homeTeam.abbreviation;
+                string ATAbbreviation = match.awayTeam.abbreviation;
+                Club homeClub = findClub(HTAbbreviation);
+                Club awayClub = findClub(ATAbbreviation);
                 if(match.homeClubGoals == match.awayClubGoals){
-                    //Implement draw
+                    homeClub.gamesDrawn++;
+                    homeClub.points++;
+                    homeClub.goalsFor += match.homeClubGoals;
+                    homeClub.goalsAgainst += match.awayClubGoals;
+                    homeClub.goalDifference = homeClub.goalsFor - homeClub.goalsAgainst;
+                    awayClub.gamesDrawn++;
+                    awayClub.points++;
+                    awayClub.goalsFor += match.awayClubGoals;
+                    awayClub.goalsAgainst += match.homeClubGoals;
+                    awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
                 }
                 else if(match.homeClubGoals > match.awayClubGoals){
-                    //Implement home team win
+                    homeClub.gamesWon++;
+                    homeClub.points += 3;
+                    homeClub.goalsFor += match.homeClubGoals;
+                    homeClub.goalDifference -= homeClub.goalsAgainst;
+                    awayClub.gamesLost++;
+                    awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
+                    awayClub.goalsAgainst += homeClub.goalsFor;
                 }
                 else{
-                    //Implement away team win
+                    homeClub.gamesLost++;
+                    awayClub.gamesWon++;
+                    awayClub.points += 3;
                 }
 
                 //Implement update of all data neccesary
@@ -72,18 +126,13 @@ namespace app{
                 }
             }
 
-            return foundClub;;
+            return foundClub;
         }
-
-
-
-        
-
-
 
         static void initiateLeague(){
             StreamReader reader = new StreamReader("Files/setup.csv");
             bool isFirstRow = true;
+            List<Club> listOfClubs = new List<Club>();
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();
@@ -94,7 +143,7 @@ namespace app{
                 }
 
                 string[] values = line.Split(';');
-                superliga = new League(
+                League temp = new League(
                     values[0], 
                     Int32.Parse(values[1]), 
                     Int32.Parse(values[2]), 
@@ -102,9 +151,11 @@ namespace app{
                     Int32.Parse(values[4]), 
                     Int32.Parse(values[5]), 
                     Int32.Parse(values[6]), 
-                    clubs
+                    listOfClubs
                     );
+                leagueList.Add(temp);
             }
+            
             reader.Close();
         }
 
@@ -175,7 +226,7 @@ namespace app{
                     isFirstRow = false; // set the flag to false for all subsequent rows
                     continue; // skip processing the first row
                 }
-                System.Console.WriteLine(line);
+                //System.Console.WriteLine(line);
                 string[] values = line.Split(';');
                 int position = 0;
                 String abbreviation = values[1];

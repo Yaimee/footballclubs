@@ -1,15 +1,42 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "RvmNdFvB3J21YLrVkXGirah4djZcZ0MrGJ0Xv333ung3sw1m7sWlJIGAxgCHCH9Mnze4YuFZAEfTHetD6YVyXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\udh12\\Desktop\\FootBall\\footballclubs\\footballclubs.csproj",
   "expectedPackageFiles": [],
+=======
+<<<<<<< HEAD
+  "dgSpecHash": "Y0AfVVU0rlUuRVqPO+KB6zxOb53jlSSWBqhRF+TCRDuDf+chVEv1sRG+H9Mfv31c3Gtjl2F9ym4wCYMOVuGX+Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\johan\\C#Programmer\\footballclubs\\footballclubs.csproj",
+  "expectedPackageFiles": [],
+=======
+  "dgSpecHash": "7wUGF/BUr2N82B6BbAR9VdshrxKb/BG7Vp8CP8hjcFL0SNISGItGinpJqM1Eq8rSaCA8z58bO6BJ5ZBNfCzxrg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\footballclubs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rasmu\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.14\\microsoft.netcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\rasmu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.14\\microsoft.windowsdesktop.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\rasmu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.14\\microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "C:\\Users\\rasmu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.14\\microsoft.netcore.app.host.win-x64.6.0.14.nupkg.sha512"
+  ],
+>>>>>>> f85886456517d29f3bf37a052107ed8143c35dbc
+>>>>>>> f1ea65db36356c5e5677ac5b8f768a3620473c09
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file C:\\Users\\udh12\\Desktop\\FootBall\\footballclubs\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+<<<<<<< HEAD
+      "message": "Problem reading the cache file C:\\Users\\johan\\C#Programmer\\footballclubs\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> f85886456517d29f3bf37a052107ed8143c35dbc
+>>>>>>> f1ea65db36356c5e5677ac5b8f768a3620473c09
     }
   ]
 }

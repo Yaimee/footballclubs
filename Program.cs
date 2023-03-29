@@ -39,12 +39,14 @@ namespace app{
             
             
             
-            //Activate the method from league specificly for that one that takes the clubs 
+            //Activate the method from league specificly for that one that takes the clubs-----------------
             //in that league and split it into 2 list that is returned inside one list 
             //that then is used to choose where the 2 list goes using index
             List<List<Club>> listOfListOfClubs = superliga.preliminaryFinish();
             upperSuperliga.clubs = listOfListOfClubs[0];
             lowerSuperliga.clubs = listOfListOfClubs[1];
+            //This need to be moved to a better plce-------------------------------------------------------
+
             System.Console.WriteLine("Testing----------------------------------------");
 
             System.Console.WriteLine("------------------------------------------------");
@@ -166,29 +168,34 @@ namespace app{
                 //Assign the clubs to the preliminary league.
                 superliga.clubs = clubs;
             }catch(Exception e){
-                System.Console.WriteLine("File not found");
+                System.Console.WriteLine("Setup File not found");
             }
             
         }
 
 
         static void initiateClubs(){
-            StreamReader reader = new StreamReader("Files/teams.csv");
-            bool isFirstRow = true;
-            while (!reader.EndOfStream)
-            {
-                string line = reader.ReadLine();
-                if (isFirstRow) // check if this is the first row
+            try{
+                StreamReader reader = new StreamReader("Files/teams.csv");
+                bool isFirstRow = true;
+                while (!reader.EndOfStream)
                 {
-                    isFirstRow = false; // set the flag to false for all subsequent rows
-                    continue; // skip processing the first row
-                }
+                    string line = reader.ReadLine();
+                    if (isFirstRow) // check if this is the first row
+                    {
+                        isFirstRow = false; // set the flag to false for all subsequent rows
+                        continue; // skip processing the first row
+                    }
 
-                string[] values = line.Split(';');
-                Club tempClub = addClub(values);
-                clubs.Add(tempClub);
+                    string[] values = line.Split(';');
+                    Club tempClub = addClub(values);
+                    clubs.Add(tempClub);
+                }
+                reader.Close();
+            }catch(Exception e){
+                System.Console.WriteLine("Club File not found");
             }
-            reader.Close();
+            
         }
 
 

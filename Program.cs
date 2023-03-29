@@ -33,7 +33,6 @@ namespace app{
             //initiateTestClubs("R22SortingTest");
             //initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
-<<<<<<< HEAD
             
             
             
@@ -41,16 +40,6 @@ namespace app{
             
             
             //Activate the method from league specificly for that one that takes the clubs-----------------
-=======
-            superliga = leagueList[0];
-            upperSuperliga = leagueList[1];
-            lowerSuperliga = leagueList[2];
-
-            superliga.clubs = clubs;
-            System.Console.WriteLine(superliga);
-            
-            //Activate the method from league specificly for that one that takes the clubs 
->>>>>>> f1ea65db36356c5e5677ac5b8f768a3620473c09
             //in that league and split it into 2 list that is returned inside one list 
             //that then is used to choose where the 2 list goes using index
             List<List<Club>> listOfListOfClubs = superliga.preliminaryFinish();
@@ -172,7 +161,6 @@ namespace app{
                 }
                 reader.Close();
 
-<<<<<<< HEAD
 
                 //Assign each leage to their global variable
                 superliga = leagueList[0];
@@ -182,22 +170,6 @@ namespace app{
                 superliga.clubs = clubs;
             }catch(Exception e){
                 System.Console.WriteLine("Setup File not found");
-=======
-                string[] values = line.Split(';');
-                LeagueType type = values[7] == "preSplitUp" ? LeagueType.PRESPLITUP : LeagueType.POSTSPLITUP;
-                League temp = new League(
-                    type,
-                    values[0], 
-                    Int32.Parse(values[1]), 
-                    Int32.Parse(values[2]), 
-                    Int32.Parse(values[3]), 
-                    Int32.Parse(values[4]), 
-                    Int32.Parse(values[5]), 
-                    Int32.Parse(values[6]), 
-                    listOfClubs
-                    );
-                leagueList.Add(temp);
->>>>>>> f1ea65db36356c5e5677ac5b8f768a3620473c09
             }
             
         }

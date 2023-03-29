@@ -8,19 +8,31 @@
     "net6.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\johan\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\rasmu\\.nuget\\packages\\": {}
+>>>>>>> f85886456517d29f3bf37a052107ed8143c35dbc
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\johan\\C#Programmer\\footballclubs\\footballclubs.csproj",
+=======
+      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\footballclubs.csproj",
+>>>>>>> f85886456517d29f3bf37a052107ed8143c35dbc
       "projectName": "footballclubs",
       "projectPath": "C:\\Users\\johan\\C#Programmer\\footballclubs\\footballclubs.csproj",
       "packagesPath": "C:\\Users\\johan\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\johan\\C#Programmer\\footballclubs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\johan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+        "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> f85886456517d29f3bf37a052107ed8143c35dbc
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -68,7 +80,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problem reading the cache file C:\\Users\\johan\\C#Programmer\\footballclubs\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problem reading the cache file C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> f85886456517d29f3bf37a052107ed8143c35dbc
     }
   ]
 }

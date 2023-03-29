@@ -1,6 +1,7 @@
 ﻿using System.IO;
 
 
+
 namespace app{
     struct Match {
         public Club homeTeam{ get; set; }
@@ -28,6 +29,7 @@ namespace app{
         static League? superliga;
         static League? upperSuperliga;
         static League? lowerSuperliga;
+        static string filepath = "Files/results.txt";
         static void Main(){
             initiateClubs();
             //initiateTestClubs("R22SortingTest");
@@ -67,22 +69,31 @@ namespace app{
             try {
                 string[] files = Directory.GetFiles("Files/","round*");
                 int i = 1;
-                foreach(string file in files) {
-                    List<Match> round = initiateRound(i);
-                    runRound(round);
-                    if(i <= 22) {
-                        Console.WriteLine("-----------------------------------------------------------------------------\n\n" + superliga + "\n");
-                    } else {
-                        Console.WriteLine("------------------------------------------------------------\n\n" + upperSuperliga);
-                        Console.WriteLine("\n" + lowerSuperliga + "\n");
+                using (StreamWriter writer = new StreamWriter(filepath))
+                {
+                    foreach(string file in files) {
+                        List<Match> round = initiateRound(i);
+                        runRound(round);
+                        if(i <= 22) {
+                            string superligaResults = "-----------------------------------------------------------------------------\n\n" + superliga + "\n";
+                            Console.WriteLine(superligaResults);
+                            writer.WriteLine(superligaResults);
+                        } else {
+                            string upperSuperligaResults = "------------------------------------------------------------\n\n" + upperSuperliga;
+                            string lowerSuperligaResults = "\n" + lowerSuperliga + "\n";
+                            Console.WriteLine(upperSuperligaResults);
+                            writer.WriteLine(upperSuperligaResults);
+                            Console.WriteLine(lowerSuperligaResults);
+                            writer.WriteLine(lowerSuperligaResults);
+                        }
+                        i++;
                     }
-                    i++;
                 }
             } catch (Exception e) {
                 Console.WriteLine("Process failed: " + e.ToString());
             }
-            
         }
+
         static void runRound(List<Match> matches){
             foreach(Match match in matches){
                 string HTAbbreviation = match.homeTeam.abbreviation;

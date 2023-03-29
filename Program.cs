@@ -64,33 +64,34 @@ namespace app{
                 string ATAbbreviation = match.awayTeam.abbreviation;
                 Club homeClub = findClub(HTAbbreviation);
                 Club awayClub = findClub(ATAbbreviation);
+                homeClub.goalsFor += match.homeClubGoals;
+                homeClub.goalsAgainst += match.awayClubGoals;
+                homeClub.goalDifference = homeClub.goalsFor - homeClub.goalsAgainst;
+                awayClub.goalsFor += match.awayClubGoals;
+                awayClub.goalsAgainst += match.homeClubGoals;
+                awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
                 if(match.homeClubGoals == match.awayClubGoals){
                     homeClub.gamesDrawn++;
                     homeClub.points++;
-                    homeClub.goalsFor += match.homeClubGoals;
-                    homeClub.goalsAgainst += match.awayClubGoals;
-                    homeClub.goalDifference = homeClub.goalsFor - homeClub.goalsAgainst;
+                    homeClub.streakSet("D");
                     awayClub.gamesDrawn++;
                     awayClub.points++;
-                    awayClub.goalsFor += match.awayClubGoals;
-                    awayClub.goalsAgainst += match.homeClubGoals;
-                    awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
+                    awayClub.streakSet("D");
                 }
                 else if(match.homeClubGoals > match.awayClubGoals){
                     homeClub.gamesWon++;
                     homeClub.points += 3;
-                    homeClub.goalsFor += match.homeClubGoals;
-                    homeClub.goalDifference -= homeClub.goalsAgainst;
+                    homeClub.streakSet("W");
                     awayClub.gamesLost++;
-                    awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
-                    awayClub.goalsAgainst += homeClub.goalsFor;
+                    awayClub.streakSet("L");
                 }
                 else{
                     homeClub.gamesLost++;
+                    homeClub.streakSet("L");
                     awayClub.gamesWon++;
                     awayClub.points += 3;
+                    awayClub.streakSet("W");
                 }
-
                 //Implement update of all data neccesary
             }
         }

@@ -8,8 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = footballclubs
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\rasmu\OneDrive\Documents\footballclubs\
-=======
-build_property.ProjectDir = C:\Users\udh12\Desktop\FootBall\footballclubs\
->>>>>>> 3bbaa0273fd7633db71f9088a6f7a6f2b7f6fd9b
+build_property.ProjectDir = c:\Users\rasmu\OneDrive\Documents\footballclubs\

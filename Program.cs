@@ -9,17 +9,18 @@ namespace app{
         static League? upperSuperliga;
         static League? lowerSuperliga;
         static void Main(){
-            initiateClubs();
+            //initiateClubs();
+            initiateTestClubs();
             initiateLeague();
             System.Console.WriteLine("Testing----------------------------------------");
             
             System.Console.WriteLine("------------------------------------------------");
             System.Console.WriteLine(superliga);
             
-            List<Match> round = initiateRound("1");
+            //List<Match> round = initiateRound("1");
 
-            runRound(round);
-           
+            //runRound(round);
+
         }
 
 
@@ -98,6 +99,8 @@ namespace app{
                     Int32.Parse(values[2]), 
                     Int32.Parse(values[3]), 
                     Int32.Parse(values[4]), 
+                    Int32.Parse(values[5]), 
+                    Int32.Parse(values[6]), 
                     clubs
                     );
             }
@@ -160,8 +163,56 @@ namespace app{
 
             return club;
         }
+        static void initiateTestClubs(){
+            StreamReader readerTest = new StreamReader("TestData/R22FinishedSortingTest.csv");
+            bool isFirstRow = true;
+            while (!readerTest.EndOfStream)
+            {
+                string line = readerTest.ReadLine();
+                if (isFirstRow) // check if this is the first row
+                {
+                    isFirstRow = false; // set the flag to false for all subsequent rows
+                    continue; // skip processing the first row
+                }
+                System.Console.WriteLine(line);
+                string[] values = line.Split(';');
+                int position = 0;
+                String abbreviation = values[1];
+                String name = values[2];
+                int gamesPlayed = Int32.Parse(values[3]);
+                int gamesWon = Int32.Parse(values[4]);
+                int gamesDrawn = Int32.Parse(values[5]);
+                int gamesLost = Int32.Parse(values[6]);
+                int goalsFor = Int32.Parse(values[7]);
+                int goalsAgainst = Int32.Parse(values[8]);
+                int goalDifference = Int32.Parse(values[9]);
+                int points = Int32.Parse(values[10]);
+                String streak = values[11];
+
+                Club tempClub = new Club(
+                        position, 
+                        abbreviation, 
+                        name, 
+                        gamesPlayed, 
+                        gamesWon, 
+                        gamesDrawn, 
+                        gamesLost, 
+                        goalsFor, 
+                        goalsAgainst, 
+                        goalDifference, 
+                        points, 
+                        streak
+                        );
+
+                clubs.Add(tempClub);
+            }
+            readerTest.Close();
+        }
 
     }
+
+
+    
 }
 
 

@@ -38,6 +38,8 @@ namespace app{
             lowerSuperliga = leagueList[2];
 
             superliga.clubs = clubs;
+            System.Console.WriteLine(superliga);
+            
             //Activate the method from league specificly for that one that takes the clubs 
             //in that league and split it into 2 list that is returned inside one list 
             //that then is used to choose where the 2 list goes using index
@@ -143,7 +145,9 @@ namespace app{
                 }
 
                 string[] values = line.Split(';');
+                LeagueType type = values[7] == "preSplitUp" ? LeagueType.PRESPLITUP : LeagueType.POSTSPLITUP;
                 League temp = new League(
+                    type,
                     values[0], 
                     Int32.Parse(values[1]), 
                     Int32.Parse(values[2]), 

@@ -5,15 +5,6 @@ build_property.UsingMicrosoftNETSdkWeb =
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = footballclubs
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\johan\C#Programmer\footballclubs\
-=======
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\rasmu\OneDrive\Documents\footballclubs\
-=======
-build_property.ProjectDir = C:\Users\udh12\Desktop\FootBall\footballclubs\
->>>>>>> 3bbaa0273fd7633db71f9088a6f7a6f2b7f6fd9b
->>>>>>> 963f19ff3cd6d253014f54d091bd48a60f428607

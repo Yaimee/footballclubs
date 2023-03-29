@@ -1,6 +1,6 @@
 namespace app{
     class Test{
-        static void Main(){
+        public void TestMethod(){
             /*
             Club myClub = clubs[0];
             System.Console.WriteLine(myClub.name);

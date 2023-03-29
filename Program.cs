@@ -3,7 +3,7 @@
 
 namespace app{
     class Program{
-
+        static List<League>? leagueList = new List<League>();
         static List<Club> clubs = new List<Club>();
         static League? superliga;
         static League? upperSuperliga;
@@ -12,10 +12,28 @@ namespace app{
             //initiateClubs();
             initiateTestClubs();
             initiateLeague();
+            superliga = leagueList[0];
+            upperSuperliga = leagueList[1];
+            lowerSuperliga = leagueList[2];
+
+
+
+            superliga.clubs = clubs;
+           
+
+            //List<Club> upperLeagueClubs = superliga.preliminaryFinish()[0];
+            //List<Club> lowerLeagueClubs = superliga.preliminaryFinish()[1];
+            //upperSuperliga.clubs = upperLeagueClubs;
+            //lowerSuperliga.clubs = lowerLeagueClubs;
+
+
             System.Console.WriteLine("Testing----------------------------------------");
-            
+            //System.Console.WriteLine(superliga);
+            //System.Console.WriteLine(upperSuperliga);
+            //System.Console.WriteLine(lowerSuperliga);
+            System.Console.WriteLine(superliga.preliminaryFinish());
             System.Console.WriteLine("------------------------------------------------");
-            System.Console.WriteLine(superliga);
+            //System.Console.WriteLine(superliga);
             
             //List<Match> round = initiateRound("1");
 
@@ -83,6 +101,7 @@ namespace app{
         static void initiateLeague(){
             StreamReader reader = new StreamReader("Files/setup.csv");
             bool isFirstRow = true;
+            List<Club> listOfClubs = new List<Club>();
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();
@@ -93,7 +112,7 @@ namespace app{
                 }
 
                 string[] values = line.Split(';');
-                superliga = new League(
+                League temp = new League(
                     values[0], 
                     Int32.Parse(values[1]), 
                     Int32.Parse(values[2]), 
@@ -101,9 +120,11 @@ namespace app{
                     Int32.Parse(values[4]), 
                     Int32.Parse(values[5]), 
                     Int32.Parse(values[6]), 
-                    clubs
+                    listOfClubs
                     );
+                leagueList.Add(temp);
             }
+            
             reader.Close();
         }
 
@@ -174,7 +195,7 @@ namespace app{
                     isFirstRow = false; // set the flag to false for all subsequent rows
                     continue; // skip processing the first row
                 }
-                System.Console.WriteLine(line);
+                //System.Console.WriteLine(line);
                 string[] values = line.Split(';');
                 int position = 0;
                 String abbreviation = values[1];

@@ -12,9 +12,23 @@ public class Club{
     public int goalDifference{ get; set;}
     public int points{ get; set;}
     public string streak{ get; set;}
+    public void streakSet(string InputResult = ""){
+        System.Console.WriteLine(streak.Length);
+        if(InputResult.Length > 1){
+            System.Console.WriteLine("This is an invalid length for the format of the Streak counter");
+        }else{
+            if(streak.Length >= 5){
+                streak = streak.Substring(1);
+                streak = streak + InputResult;
+            }else{
+                streak = streak + InputResult;
+            }
+            this.streak = streak;
+        }
+    }
 
      public Club(int position, string abbreviation, string name, int gamesPlayed, int gamesWon, int gamesDrawn, 
-                int gamesLost, int goalsFor, int goalsAgainst, int goalDifference, int points, string streak) {
+                int gamesLost, int goalsFor, int goalsAgainst, int goalDifference, int points, string streak = "") {
 
         this.position = position;
         this.name = name;

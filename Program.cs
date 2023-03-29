@@ -6,22 +6,15 @@ namespace app{
 
         static List<Club> clubs = new List<Club>();
         static League? superliga;
+        static League? upperSuperliga;
+        static League? lowerSuperliga;
         static void Main(){
             //initiateClubs();
             //initiateTestClubs("R22SortingTest");
             initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
             System.Console.WriteLine("Testing----------------------------------------");
-            Club myClub = clubs[0];
-            System.Console.WriteLine(myClub.name);
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            myClub.streakSet("W");
-            System.Console.WriteLine(myClub.streak);
-            myClub.streakSet("L");
-            System.Console.WriteLine(myClub.streak);
+            
             System.Console.WriteLine("------------------------------------------------");
             System.Console.WriteLine(superliga);
             

@@ -70,6 +70,9 @@ public class League{
         List<Club> upperLeagueClubs = new List<Club>();
         List<Club> lowerLeagueClubs = new List<Club>();
         
+        sortTeams();
+        upperLeagueClubs = clubs.GetRange(0,6);
+        lowerLeagueClubs = clubs.GetRange(6,6);
 
         listOfClubs.Add(upperLeagueClubs);
         listOfClubs.Add(lowerLeagueClubs);

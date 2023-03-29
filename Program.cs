@@ -17,22 +17,17 @@ namespace app{
             upperSuperliga = leagueList[1];
             lowerSuperliga = leagueList[2];
 
-
-
             superliga.clubs = clubs;
-           
-
-            //List<Club> upperLeagueClubs = superliga.preliminaryFinish()[0];
-            //List<Club> lowerLeagueClubs = superliga.preliminaryFinish()[1];
-            //upperSuperliga.clubs = upperLeagueClubs;
-            //lowerSuperliga.clubs = lowerLeagueClubs;
+            //Activate the method from league specificly for that one that takes the clubs 
+            //in that league and split it into 2 list that is returned inside one list 
+            //that then is used to choose where the 2 list goes using index
+            List<Club> upperLeagueClubs = superliga.preliminaryFinish()[0];
+            List<Club> lowerLeagueClubs = superliga.preliminaryFinish()[1];
+            upperSuperliga.clubs = upperLeagueClubs;
+            lowerSuperliga.clubs = lowerLeagueClubs;
 
 
             System.Console.WriteLine("Testing----------------------------------------");
-            //System.Console.WriteLine(superliga);
-            //System.Console.WriteLine(upperSuperliga);
-            //System.Console.WriteLine(lowerSuperliga);
-            System.Console.WriteLine(superliga.preliminaryFinish());
             System.Console.WriteLine("------------------------------------------------");
             //System.Console.WriteLine(superliga);
             

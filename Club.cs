@@ -14,7 +14,7 @@ public class Club{
     public string streak{ get; set;}
     public void streakSet(string InputResult = ""){
         System.Console.WriteLine(streak.Length);
-        if(InputResult.Length > 1){
+        if(InputResult.Length != 1){
             System.Console.WriteLine("This is an invalid length for the format of the Streak counter");
         }else{
             if(streak.Length >= 5){

@@ -10,7 +10,8 @@ namespace app{
         static League? lowerSuperliga;
         static void Main(){
             //initiateClubs();
-            initiateTestClubs();
+            //initiateTestClubs("R22SortingTest");
+            initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
             superliga = leagueList[0];
             upperSuperliga = leagueList[1];
@@ -184,8 +185,8 @@ namespace app{
 
             return club;
         }
-        static void initiateTestClubs(){
-            StreamReader readerTest = new StreamReader("TestData/R22FinishedSortingTest.csv");
+        static void initiateTestClubs(string file){
+            StreamReader readerTest = new StreamReader("test/" + file + ".csv");
             bool isFirstRow = true;
             while (!readerTest.EndOfStream)
             {

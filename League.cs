@@ -20,18 +20,17 @@ public class League{
         this.clubs = clubs;
     }
 
-    private IOrderedEnumerable<Club> getTeamsSorted(){
+    private void sortTeams(){
+        clubs = clubs.OrderByDescending(c => c.points)
+             .ThenByDescending(c => c.goalDifference)
+             .ThenByDescending(c => c.goalsFor)
+             .ThenBy(c => c.name)
+             .ToList();
         
-        var sortedClubs = clubs
-            .OrderByDescending(c => c.points)
-            .ThenByDescending(c => c.goalDifference)
-            .ThenByDescending(c => c.goalsFor)
-            .ThenBy(c => c.name);
-        
-        int position = 1;
         Club tempClub = null;
-        foreach(Club club in sortedClubs){
-            club.position = position;
+        for(int i = 0; i < clubs.Count; i++){
+            Club club = clubs[i];
+            club.position = i + 1;
             if(tempClub != null){
                 bool pointsIsSame = club.points == tempClub.points;
                 bool goalDifIsSame = club.goalDifference == tempClub.goalDifference;
@@ -41,11 +40,11 @@ public class League{
                     club.position = 100;
                 }
             }
-            position++;
             tempClub = club;
         }
-        return sortedClubs;
     }
+
+
     public int longestTeamName(){
         int[] arrLen = new int[12];
         int j = 0;
@@ -105,13 +104,16 @@ public class League{
                             "Pos", "abr", "Club Name", "G", "W", "D", "L", "G+", "G-", "GD", "P", "Streak");
 
         //Sorting the teams by points etc. then adding them to the tostring in the same format as the header.
-        IOrderedEnumerable<Club> sortedClubs =  getTeamsSorted();
-        foreach (Club club in sortedClubs){
+        sortTeams();
+        if(clubs.Count != null){
+            foreach (Club club in clubs){
             String pos = club.position == 100? "-" : club.position.ToString();
             returnString += "\n"+string.Format(formatter(), 
                          pos, club.abbreviation, club.name, club.gamesPlayed, club.gamesWon, club.gamesDrawn, club.gamesLost, club.goalsFor, 
                          club.goalsAgainst, club.goalDifference, club.points, club.streak);
+            }
         }
+        
 
         
         return returnString;

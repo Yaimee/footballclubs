@@ -33,6 +33,13 @@ namespace app{
             //initiateTestClubs("R22SortingTest");
             //initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
+            
+            
+            
+            
+            
+            
+            //Activate the method from league specificly for that one that takes the clubs-----------------
             //in that league and split it into 2 list that is returned inside one list 
             //that then is used to choose where the 2 list goes using index
             //List<List<Club>> listOfListOfClubs = superliga.preliminaryFinish();

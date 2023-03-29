@@ -8,7 +8,8 @@ namespace app{
         static League? superliga;
         static void Main(){
             //initiateClubs();
-            initiateTestClubs();
+            //initiateTestClubs("R22SortingTest");
+            initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
             System.Console.WriteLine("Testing----------------------------------------");
             Club myClub = clubs[0];
@@ -170,8 +171,8 @@ namespace app{
 
             return club;
         }
-        static void initiateTestClubs(){
-            StreamReader readerTest = new StreamReader("TestData/R22FinishedSortingTest.csv");
+        static void initiateTestClubs(string file){
+            StreamReader readerTest = new StreamReader("test/" + file + ".csv");
             bool isFirstRow = true;
             while (!readerTest.EndOfStream)
             {

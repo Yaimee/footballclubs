@@ -4,15 +4,19 @@ public class League{
     public int UELPositions{ get; set; }
     public int UECLPositions{ get; set; }
     public int relegationSpots{ get; set; }
+    public int upperLeagueSpots{ get; set; }
+    public int lowerLeagueSpots{ get; set; }
 
     public List<Club>? clubs{ get; set; }
 
-    public League(String name, int UCLPositions, int UELPositions, int UECLPositions, int relegationSpots, List<Club> clubs){
+    public League(String name, int UCLPositions, int UELPositions, int UECLPositions, int relegationSpots, int upperLeagueSpots, int lowerLeagueSpots, List<Club> clubs){
         this.name = name;
         this.UCLPositions = UCLPositions;
         this.UELPositions = UELPositions;
         this.UECLPositions = UECLPositions;
         this.relegationSpots = relegationSpots;
+        this.upperLeagueSpots = upperLeagueSpots;
+        this.lowerLeagueSpots = lowerLeagueSpots;
         this.clubs = clubs;
     }
 

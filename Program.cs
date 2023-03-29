@@ -49,24 +49,40 @@ namespace app{
 
             System.Console.WriteLine("Testing----------------------------------------");
             System.Console.WriteLine("------------------------------------------------");
-            //System.Console.WriteLine(superliga);
+            runRounds();
+            System.Console.WriteLine(superliga);
             
-            //List<Match> round = initiateRound("1");
+            //
 
             //runRound(round);
 
         }
 
-
+        static void runRounds() {
+            try {
+                string[] files = Directory.GetFiles("Files/","round*");
+                int i = 1;
+                foreach(string file in files) {
+                    List<Match> round = initiateRound(i);
+                    runRound(round);
+                    i++;
+                }
+            } catch (Exception e) {
+                Console.WriteLine("Process failed: " + e.ToString());
+            }
+            
+        }
         static void runRound(List<Match> matches){
             foreach(Match match in matches){
                 string HTAbbreviation = match.homeTeam.abbreviation;
                 string ATAbbreviation = match.awayTeam.abbreviation;
                 Club homeClub = findClub(HTAbbreviation);
                 Club awayClub = findClub(ATAbbreviation);
+                homeClub.gamesPlayed += 1;
                 homeClub.goalsFor += match.homeClubGoals;
                 homeClub.goalsAgainst += match.awayClubGoals;
                 homeClub.goalDifference = homeClub.goalsFor - homeClub.goalsAgainst;
+                awayClub.gamesPlayed += 1;
                 awayClub.goalsFor += match.awayClubGoals;
                 awayClub.goalsAgainst += match.homeClubGoals;
                 awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
@@ -96,13 +112,14 @@ namespace app{
             }
         }
 
-        static List<Match> initiateRound(String round){
+        static List<Match> initiateRound(int round){
             List<Match> matches = new List<Match>();
             StreamReader reader = new StreamReader("Files/round-" + round + ".csv");
             while (!reader.EndOfStream)
             {
                 string line = reader.ReadLine();
                 string[] values = line.Split(',');
+                Console.WriteLine(values[0]);
                 Match tempMatch = getMatch(values);
                 matches.Add(tempMatch);
             }

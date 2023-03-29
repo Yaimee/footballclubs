@@ -29,26 +29,31 @@ namespace app{
         static League? upperSuperliga;
         static League? lowerSuperliga;
         static void Main(){
-            //initiateClubs();
+            initiateClubs();
             //initiateTestClubs("R22SortingTest");
-            initiateTestClubs("R22SortingTestEqualPoints");
+            //initiateTestClubs("R22SortingTestEqualPoints");
             initiateLeague();
-            superliga = leagueList[0];
-            upperSuperliga = leagueList[1];
-            lowerSuperliga = leagueList[2];
-
-            superliga.clubs = clubs;
-            //Activate the method from league specificly for that one that takes the clubs 
+            
+            
+            
+            
+            
+            
+            //Activate the method from league specificly for that one that takes the clubs-----------------
             //in that league and split it into 2 list that is returned inside one list 
             //that then is used to choose where the 2 list goes using index
-            List<Club> upperLeagueClubs = superliga.preliminaryFinish()[0];
-            List<Club> lowerLeagueClubs = superliga.preliminaryFinish()[1];
-            upperSuperliga.clubs = upperLeagueClubs;
-            lowerSuperliga.clubs = lowerLeagueClubs;
-
+            //List<List<Club>> listOfListOfClubs = superliga.preliminaryFinish();
+            //upperSuperliga.clubs = listOfListOfClubs[0];
+            //lowerSuperliga.clubs = listOfListOfClubs[1];
+            //This need to be moved to a better plce-------------------------------------------------------
 
             System.Console.WriteLine("Testing----------------------------------------");
+
             System.Console.WriteLine("------------------------------------------------");
+            System.Console.WriteLine(superliga);
+            System.Console.WriteLine(upperSuperliga);
+            System.Console.WriteLine(lowerSuperliga);
+            //List<Match> round = initiateRound("1");
             runRounds();
             System.Console.WriteLine(superliga);
             
@@ -148,53 +153,72 @@ namespace app{
         }
 
         static void initiateLeague(){
-            StreamReader reader = new StreamReader("Files/setup.csv");
-            bool isFirstRow = true;
-            List<Club> listOfClubs = new List<Club>();
-            while (!reader.EndOfStream)
-            {
-                string line = reader.ReadLine();
-                if (isFirstRow) // check if this is the first row
+            try{
+                StreamReader reader = new StreamReader("Files/setup.csv");
+                bool isFirstRow = true;
+                List<Club> listOfClubs = new List<Club>();
+                while (!reader.EndOfStream)
                 {
-                    isFirstRow = false; // set the flag to false for all subsequent rows
-                    continue; // skip processing the first row
-                }
+                    string line = reader.ReadLine();
+                    if (isFirstRow) // check if this is the first row
+                    {
+                        isFirstRow = false; // set the flag to false for all subsequent rows
+                        continue; // skip processing the first row
+                    }
 
-                string[] values = line.Split(';');
-                League temp = new League(
-                    values[0], 
-                    Int32.Parse(values[1]), 
-                    Int32.Parse(values[2]), 
-                    Int32.Parse(values[3]), 
-                    Int32.Parse(values[4]), 
-                    Int32.Parse(values[5]), 
-                    Int32.Parse(values[6]), 
-                    listOfClubs
-                    );
-                leagueList.Add(temp);
+                    string[] values = line.Split(';');
+                    LeagueType type = values[7] == "preSplitUp" ? LeagueType.PRESPLITUP : LeagueType.POSTSPLITUP;
+                    League temp = new League(
+                        type,
+                        values[0], 
+                        Int32.Parse(values[1]), 
+                        Int32.Parse(values[2]), 
+                        Int32.Parse(values[3]), 
+                        Int32.Parse(values[4]), 
+                        Int32.Parse(values[5]), 
+                        Int32.Parse(values[6]), 
+                        listOfClubs
+                        );
+                    leagueList.Add(temp);
+                }
+                reader.Close();
+
+
+                //Assign each leage to their global variable
+                superliga = leagueList[0];
+                upperSuperliga = leagueList[1];
+                lowerSuperliga = leagueList[2];
+                //Assign the clubs to the preliminary league.
+                superliga.clubs = clubs;
+            }catch(Exception e){
+                System.Console.WriteLine("Setup File not found");
             }
             
-            reader.Close();
         }
 
 
         static void initiateClubs(){
-            StreamReader reader = new StreamReader("Files/teams.csv");
-            bool isFirstRow = true;
-            while (!reader.EndOfStream)
-            {
-                string line = reader.ReadLine();
-                if (isFirstRow) // check if this is the first row
+            try{
+                StreamReader reader = new StreamReader("Files/teams.csv");
+                bool isFirstRow = true;
+                while (!reader.EndOfStream)
                 {
-                    isFirstRow = false; // set the flag to false for all subsequent rows
-                    continue; // skip processing the first row
-                }
+                    string line = reader.ReadLine();
+                    if (isFirstRow) // check if this is the first row
+                    {
+                        isFirstRow = false; // set the flag to false for all subsequent rows
+                        continue; // skip processing the first row
+                    }
 
-                string[] values = line.Split(';');
-                Club tempClub = addClub(values);
-                clubs.Add(tempClub);
+                    string[] values = line.Split(';');
+                    Club tempClub = addClub(values);
+                    clubs.Add(tempClub);
+                }
+                reader.Close();
+            }catch(Exception e){
+                System.Console.WriteLine("Club File not found");
             }
-            reader.Close();
+            
         }
 
 

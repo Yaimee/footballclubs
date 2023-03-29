@@ -1,5 +1,5 @@
 ﻿using System.IO;
-
+using System.Timers;
 
 
 namespace app{
@@ -87,6 +87,7 @@ namespace app{
                             writer.WriteLine(lowerSuperligaResults);
                         }
                         i++;
+                        Thread.Sleep(1000);
                     }
                 }
             } catch (Exception e) {

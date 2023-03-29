@@ -1,4 +1,454 @@
-hejehj
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     RFC   Randers Football Club       1   1   0   0   3   0   3   3   W  
+2     AGF   Aarhus gymnastikforening    1   1   0   0   4   2   2   3   W  
+3     S     Soenderjyske                1   1   0   0   2   0   2   3   W  
+4     BIF   Broendby Idraetsforening    1   1   0   0   3   2   1   3   W  
+-     OB    Odense Boldklub             1   1   0   0   3   2   1   3   W  
+6     L     Lyngby Boldklub             1   0   1   0   0   0   0   1   D  
+-     AAB   Aalborg Boldklub            1   0   1   0   0   0   0   1   D  
+8     FCK   Football Club Koebenhavn    1   0   0   1   2   3   -1  0   L  
+-     FCN   Football Club Nordsjaelland 1   0   0   1   2   3   -1  0   L  
+10    VB    Vejle Baoldklub             1   0   0   1   2   4   -2  0   L  
+11    FCM   Football Club Midtjylland   1   0   0   1   0   2   -2  0   L  
+12    ACH   Alliance Club Horsens       1   0   0   1   0   3   -3  0   L  
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    2   2   0   0   5   3   2   6   WW 
+2     RFC   Randers Football Club       2   1   1   0   4   1   3   4   WD 
+3     AGF   Aarhus gymnastikforening    2   1   1   0   5   3   2   4   WD 
+4     OB    Odense Boldklub             2   1   1   0   4   3   1   4   WD 
+5     AAB   Aalborg Boldklub            2   1   1   0   1   0   1   4   DW 
+6     VB    Vejle Baoldklub             2   1   0   1   6   5   1   3   LW 
+7     S     Soenderjyske                2   1   0   1   3   4   -1  3   WL 
+8     FCM   Football Club Midtjylland   2   1   0   1   1   2   -1  3   LW 
+9     FCN   Football Club Nordsjaelland 2   0   1   1   3   4   -1  1   LD 
+10    L     Lyngby Boldklub             2   0   1   1   0   1   -1  1   DL 
+11    FCK   Football Club Koebenhavn    2   0   0   2   3   5   -2  0   LL 
+12    ACH   Alliance Club Horsens       2   0   0   2   0   4   -4  0   LL 
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    3   3   0   0   7   4   3   9   WWW
+2     AGF   Aarhus gymnastikforening    3   2   1   0   9   5   4   7   WDW
+3     S     Soenderjyske                3   2   0   1   6   5   1   6   WLW
+4     FCM   Football Club Midtjylland   3   2   0   1   2   2   0   6   LWW
+5     FCN   Football Club Nordsjaelland 3   1   1   1   7   5   2   4   LDW
+6     RFC   Randers Football Club       3   1   1   1   4   2   2   4   WDL
+7     VB    Vejle Baoldklub             3   1   1   1   8   7   1   4   LWD
+8     OB    Odense Boldklub             3   1   1   1   6   7   -1  4   WDL
+9     AAB   Aalborg Boldklub            3   1   1   1   2   3   -1  4   DWL
+10    FCK   Football Club Koebenhavn    3   0   1   2   5   7   -2  1   LLD
+11    L     Lyngby Boldklub             3   0   1   2   1   5   -4  1   DLL
+12    ACH   Alliance Club Horsens       3   0   0   3   1   6   -5  0   LLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    4   4   0   0   9   5   4   12  WWWW
+2     AGF   Aarhus gymnastikforening    4   2   2   0   10  6   4   8   WDWD
+3     VB    Vejle Baoldklub             4   2   1   1   9   7   2   7   LWDW
+4     S     Soenderjyske                4   2   1   1   8   7   1   7   WLWD
+5     FCM   Football Club Midtjylland   4   2   1   1   4   4   0   7   LWWD
+6     AAB   Aalborg Boldklub            4   1   2   1   3   4   -1  5   DWLD
+7     FCN   Football Club Nordsjaelland 4   1   1   2   9   8   1   4   LDWL
+8     RFC   Randers Football Club       4   1   1   2   5   4   1   4   WDLL
+9     FCK   Football Club Koebenhavn    4   1   1   2   8   9   -1  4   LLDW
+10    OB    Odense Boldklub             4   1   1   2   6   8   -2  4   WDLL
+11    L     Lyngby Boldklub             4   0   2   2   3   7   -4  2   DLLD
+12    ACH   Alliance Club Horsens       4   0   1   3   3   8   -5  1   LLLD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    5   4   0   1   9   7   2   12  WWWWL
+2     AGF   Aarhus gymnastikforening    5   3   2   0   13  6   7   11  WDWDW
+3     VB    Vejle Baoldklub             5   3   1   1   12  9   3   10  LWDWW
+4     S     Soenderjyske                5   3   1   1   10  7   3   10  WLWDW
+5     FCM   Football Club Midtjylland   5   3   1   1   7   5   2   10  LWWDW
+6     AAB   Aalborg Boldklub            5   2   2   1   5   5   0   8   DWLDW
+7     FCN   Football Club Nordsjaelland 5   2   1   2   10  8   2   7   LDWLW
+8     RFC   Randers Football Club       5   1   1   3   5   5   0   4   WDLLL
+9     FCK   Football Club Koebenhavn    5   1   1   3   9   11  -2  4   LLDWL
+10    OB    Odense Boldklub             5   1   1   3   7   11  -4  4   WDLLL
+11    L     Lyngby Boldklub             5   0   2   3   5   10  -5  2   DLLDL
+12    ACH   Alliance Club Horsens       5   0   1   4   3   11  -8  1   LLLDL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     VB    Vejle Baoldklub             6   4   1   1   15  10  5   13  WDWWW
+2     S     Soenderjyske                6   4   1   1   12  8   4   13  LWDWW
+3     FCM   Football Club Midtjylland   6   4   1   1   10  7   3   13  WWDWW
+4     BIF   Broendby Idraetsforening    6   4   0   2   11  10  1   12  WWWLL
+5     AGF   Aarhus gymnastikforening    6   3   2   1   13  7   6   11  DWDWL
+6     FCN   Football Club Nordsjaelland 6   2   2   2   11  9   2   8   DWLWD
+7     AAB   Aalborg Boldklub            6   2   2   2   6   8   -2  8   WLDWL
+8     FCK   Football Club Koebenhavn    6   2   1   3   10  11  -1  7   LDWLW
+-     OB    Odense Boldklub             6   2   1   3   10  11  -1  7   DLLLW
+10    RFC   Randers Football Club       6   1   1   4   6   7   -1  4   DLLLL
+11    L     Lyngby Boldklub             6   0   2   4   5   13  -8  2   LLDLL
+12    ACH   Alliance Club Horsens       6   0   2   4   4   12  -8  2   LLDLD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     S     Soenderjyske                7   4   2   1   13  9   4   14  WDWWD
+2     VB    Vejle Baoldklub             7   4   1   2   15  13  2   13  DWWWL
+3     FCM   Football Club Midtjylland   7   4   1   2   11  11  0   13  WDWWL
+4     AGF   Aarhus gymnastikforening    7   3   3   1   14  8   6   12  WDWLD
+5     BIF   Broendby Idraetsforening    7   4   0   3   12  12  0   12  WWLLL
+6     FCN   Football Club Nordsjaelland 7   3   2   2   15  10  5   11  WLWDW
+7     AAB   Aalborg Boldklub            7   3   2   2   8   9   -1  11  LDWLW
+8     FCK   Football Club Koebenhavn    7   3   1   3   14  13  1   10  DWLWW
+9     OB    Odense Boldklub             7   3   1   3   11  11  0   10  LLLWW
+10    RFC   Randers Football Club       7   2   1   4   9   7   2   7   LLLLW
+11    ACH   Alliance Club Horsens       7   0   2   5   4   13  -9  2   LDLDL
+12    L     Lyngby Boldklub             7   0   2   5   7   17  -10 2   LDLLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     S     Soenderjyske                8   5   2   1   16  9   7   17  DWWDW
+2     FCM   Football Club Midtjylland   8   5   1   2   15  11  4   16  DWWLW
+3     AGF   Aarhus gymnastikforening    8   4   3   1   16  9   7   15  DWLDW
+4     BIF   Broendby Idraetsforening    8   5   0   3   15  13  2   15  WLLLW
+5     VB    Vejle Baoldklub             8   4   2   2   16  14  2   14  WWWLD
+6     AAB   Aalborg Boldklub            8   4   2   2   10  10  0   14  DWLWW
+7     FCN   Football Club Nordsjaelland 8   3   3   2   16  11  5   12  LWDWD
+8     OB    Odense Boldklub             8   3   1   4   12  14  -2  10  LLWWL
+9     FCK   Football Club Koebenhavn    8   3   1   4   14  17  -3  10  WLWWL
+10    RFC   Randers Football Club       8   2   1   5   10  9   1   7   LLLWL
+11    L     Lyngby Boldklub             8   0   2   6   8   19  -11 2   DLLLL
+12    ACH   Alliance Club Horsens       8   0   2   6   4   16  -12 2   DLDLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     FCM   Football Club Midtjylland   9   6   1   2   17  12  5   19  WWLWW
+2     S     Soenderjyske                9   5   3   1   17  10  7   18  WWDWD
+3     BIF   Broendby Idraetsforening    9   6   0   3   17  13  4   18  LLLWW
+4     AGF   Aarhus gymnastikforening    9   4   3   2   17  11  6   15  WLDWL
+5     AAB   Aalborg Boldklub            9   4   3   2   11  11  0   15  WLWWD
+6     VB    Vejle Baoldklub             9   4   2   3   16  16  0   14  WWLDL
+7     FCN   Football Club Nordsjaelland 9   3   4   2   17  12  5   13  WDWDD
+8     OB    Odense Boldklub             9   3   2   4   13  15  -2  11  LWWLD
+9     RFC   Randers Football Club       9   3   1   5   12  10  2   10  LLWLW
+10    FCK   Football Club Koebenhavn    9   3   1   5   15  19  -4  10  LWWLL
+11    L     Lyngby Boldklub             9   0   3   6   9   20  -11 3   LLLLD
+12    ACH   Alliance Club Horsens       9   0   3   6   5   17  -12 3   LDLLD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    10  7   0   3   21  14  7   21  LLWWW
+2     FCM   Football Club Midtjylland   10  6   2   2   17  12  5   20  WLWWD
+3     S     Soenderjyske                10  5   3   2   18  13  5   18  WDWDL
+4     FCN   Football Club Nordsjaelland 10  4   4   2   20  13  7   16  DWDDW
+5     AAB   Aalborg Boldklub            10  4   4   2   11  11  0   16  LWWDD
+6     AGF   Aarhus gymnastikforening    10  4   3   3   18  14  4   15  LDWLL
+7     VB    Vejle Baoldklub             10  4   2   4   17  19  -2  14  WLDLL
+8     RFC   Randers Football Club       10  4   1   5   14  11  3   13  LWLWW
+9     FCK   Football Club Koebenhavn    10  4   1   5   18  20  -2  13  WWLLW
+10    OB    Odense Boldklub             10  3   2   5   14  17  -3  11  WWLDL
+11    ACH   Alliance Club Horsens       10  1   3   6   8   18  -10 6   DLLDW
+12    L     Lyngby Boldklub             10  0   3   7   10  24  -14 3   LLLDL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     FCM   Football Club Midtjylland   11  7   2   2   19  12  7   23  LWWDW
+2     S     Soenderjyske                11  6   3   2   20  14  6   21  DWDLW
+3     BIF   Broendby Idraetsforening    11  7   0   4   22  17  5   21  LWWWL
+4     AGF   Aarhus gymnastikforening    11  5   3   3   21  15  6   18  DWLLW
+5     FCN   Football Club Nordsjaelland 11  4   4   3   21  15  6   16  WDDWL
+6     RFC   Randers Football Club       11  5   1   5   17  11  6   16  WLWWW
+7     FCK   Football Club Koebenhavn    11  5   1   5   20  20  0   16  WLLWW
+8     AAB   Aalborg Boldklub            11  4   4   3   12  13  -1  16  WWDDL
+9     OB    Odense Boldklub             11  4   2   5   16  18  -2  14  WLDLW
+10    VB    Vejle Baoldklub             11  4   2   5   17  21  -4  14  LDLLL
+11    ACH   Alliance Club Horsens       11  1   3   7   8   20  -12 6   LLDWL
+12    L     Lyngby Boldklub             11  0   3   8   10  27  -17 3   LLDLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     FCM   Football Club Midtjylland   12  7   3   2   20  13  7   24  WWDWD
+2     BIF   Broendby Idraetsforening    12  8   0   4   24  18  6   24  WWWLW
+3     AGF   Aarhus gymnastikforening    12  6   3   3   23  16  7   21  WLLWW
+4     S     Soenderjyske                12  6   3   3   21  16  5   21  WDLWL
+5     RFC   Randers Football Club       12  6   1   5   20  12  8   19  LWWWW
+6     FCK   Football Club Koebenhavn    12  6   1   5   21  20  1   19  LLWWW
+7     AAB   Aalborg Boldklub            12  5   4   3   15  15  0   19  WDDLW
+8     FCN   Football Club Nordsjaelland 12  4   4   4   21  16  5   16  DDWLL
+9     OB    Odense Boldklub             12  4   3   5   17  19  -2  15  LDLWD
+10    VB    Vejle Baoldklub             12  4   2   6   18  24  -6  14  DLLLL
+11    ACH   Alliance Club Horsens       12  1   3   8   9   22  -13 6   LDWLL
+12    L     Lyngby Boldklub             12  0   3   9   12  30  -18 3   LDLLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     FCM   Football Club Midtjylland   13  8   3   2   23  14  9   27  WDWDW
+2     BIF   Broendby Idraetsforening    13  9   0   4   26  19  7   27  WWLWW
+3     AGF   Aarhus gymnastikforening    13  7   3   3   26  16  10  24  LLWWW
+4     RFC   Randers Football Club       13  7   1   5   21  12  9   22  WWWWW
+5     S     Soenderjyske                13  6   3   4   21  17  4   21  DLWLL
+6     FCK   Football Club Koebenhavn    13  6   2   5   22  21  1   20  LWWWD
+7     AAB   Aalborg Boldklub            13  5   4   4   15  18  -3  19  DDLWL
+8     FCN   Football Club Nordsjaelland 13  4   4   5   22  19  3   16  DWLLL
+9     OB    Odense Boldklub             13  4   4   5   18  20  -2  16  DLWDD
+10    VB    Vejle Baoldklub             13  4   3   6   18  24  -6  15  LLLLD
+11    ACH   Alliance Club Horsens       13  1   3   9   10  24  -14 6   DWLLL
+12    L     Lyngby Boldklub             13  0   4   9   12  30  -18 4   DLLLD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    14  10  0   4   27  19  8   30  WLWWW
+2     FCM   Football Club Midtjylland   14  8   3   3   24  16  8   27  DWDWL
+3     RFC   Randers Football Club       14  8   1   5   24  12  12  25  WWWWW
+4     AGF   Aarhus gymnastikforening    14  7   4   3   26  16  10  25  LWWWD
+5     S     Soenderjyske                14  7   3   4   23  18  5   24  LWLLW
+6     FCK   Football Club Koebenhavn    14  7   2   5   25  23  2   23  WWWDW
+7     AAB   Aalborg Boldklub            14  5   4   5   17  21  -4  19  DLWLL
+8     FCN   Football Club Nordsjaelland 14  4   4   6   22  20  2   16  WLLLL
+9     OB    Odense Boldklub             14  4   4   6   18  21  -3  16  LWDDL
+10    VB    Vejle Baoldklub             14  4   4   6   18  24  -6  16  LLLDD
+11    L     Lyngby Boldklub             14  1   4   9   13  30  -17 7   LLLDW
+12    ACH   Alliance Club Horsens       14  1   3   10  10  27  -17 6   WLLLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    15  10  1   4   28  20  8   31  LWWWD
+2     FCM   Football Club Midtjylland   15  9   3   3   26  17  9   30  WDWLW
+3     AGF   Aarhus gymnastikforening    15  8   4   3   27  16  11  28  WWWDW
+4     FCK   Football Club Koebenhavn    15  8   2   5   27  23  4   26  WWDWW
+5     RFC   Randers Football Club       15  8   1   6   25  14  11  25  WWWWL
+6     S     Soenderjyske                15  7   3   5   23  19  4   24  WLLWL
+7     AAB   Aalborg Boldklub            15  5   5   5   18  22  -4  20  LWLLD
+8     OB    Odense Boldklub             15  5   4   6   20  21  -1  19  WDDLW
+9     VB    Vejle Baoldklub             15  5   4   6   19  24  -5  19  LLDDW
+10    FCN   Football Club Nordsjaelland 15  4   4   7   22  22  0   16  LLLLL
+11    L     Lyngby Boldklub             15  1   4   10  13  31  -18 7   LLDWL
+12    ACH   Alliance Club Horsens       15  1   3   11  10  29  -19 6   LLLLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    16  11  1   4   32  20  12  34  WWWDW
+2     FCM   Football Club Midtjylland   16  10  3   3   27  17  10  33  DWLWW
+3     AGF   Aarhus gymnastikforening    16  8   5   3   27  16  11  29  WWDWD
+4     FCK   Football Club Koebenhavn    16  9   2   5   30  25  5   29  WDWWW
+5     RFC   Randers Football Club       16  8   2   6   25  14  11  26  WWWLD
+6     S     Soenderjyske                16  7   3   6   25  22  3   24  LLWLL
+7     AAB   Aalborg Boldklub            16  5   6   5   18  22  -4  21  WLLDD
+8     OB    Odense Boldklub             16  5   5   6   20  21  -1  20  DDLWD
+9     VB    Vejle Baoldklub             16  5   5   6   21  26  -5  20  LDDWD
+10    FCN   Football Club Nordsjaelland 16  4   5   7   24  24  0   17  LLLLD
+11    L     Lyngby Boldklub             16  1   4   11  13  35  -22 7   LDWLL
+12    ACH   Alliance Club Horsens       16  1   3   12  10  30  -20 6   LLLLL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    17  12  1   4   34  21  13  37  WWDWW
+2     FCM   Football Club Midtjylland   17  11  3   3   29  17  12  36  WLWWW
+3     AGF   Aarhus gymnastikforening    17  9   5   3   29  16  13  32  WDWDW
+4     FCK   Football Club Koebenhavn    17  9   3   5   32  27  5   30  DWWWD
+5     RFC   Randers Football Club       17  8   3   6   26  15  11  27  WWLDD
+6     S     Soenderjyske                17  7   3   7   25  24  1   24  LWLLL
+7     OB    Odense Boldklub             17  5   6   6   20  21  -1  21  DLWDD
+8     AAB   Aalborg Boldklub            17  5   6   6   18  24  -6  21  LLDDL
+9     VB    Vejle Baoldklub             17  5   5   7   22  28  -6  20  DDWDL
+10    FCN   Football Club Nordsjaelland 17  4   6   7   25  25  0   18  LLLDD
+11    L     Lyngby Boldklub             17  1   5   11  15  37  -22 8   DWLLD
+12    ACH   Alliance Club Horsens       17  1   4   12  10  30  -20 7   LLLLD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     FCM   Football Club Midtjylland   18  12  3   3   30  17  13  39  LWWWW
+2     BIF   Broendby Idraetsforening    18  12  1   5   34  22  12  37  WDWWL
+3     AGF   Aarhus gymnastikforening    18  9   6   3   32  19  13  33  DWDWD
+4     FCK   Football Club Koebenhavn    18  9   4   5   35  30  5   31  WWWDD
+5     RFC   Randers Football Club       18  8   3   7   27  17  10  27  WLDDL
+6     OB    Odense Boldklub             18  6   6   6   22  22  0   24  LWDDW
+7     S     Soenderjyske                18  7   3   8   26  28  -2  24  WLLLL
+8     AAB   Aalborg Boldklub            18  5   7   6   20  26  -6  22  LDDLD
+9     VB    Vejle Baoldklub             18  5   6   7   22  28  -6  21  DWDLD
+10    FCN   Football Club Nordsjaelland 18  4   7   7   27  27  0   19  LLDDD
+11    L     Lyngby Boldklub             18  2   5   11  19  38  -19 11  WLLDW
+12    ACH   Alliance Club Horsens       18  1   5   12  10  30  -20 8   LLLDD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     FCM   Football Club Midtjylland   19  12  3   4   30  19  11  39  WWWWL
+2     BIF   Broendby Idraetsforening    19  12  2   5   34  22  12  38  DWWLD
+3     FCK   Football Club Koebenhavn    19  10  4   5   37  31  6   34  WWDDW
+4     AGF   Aarhus gymnastikforening    19  9   6   4   32  20  12  33  WDWDL
+5     RFC   Randers Football Club       19  8   4   7   27  17  10  28  LDDLD
+6     OB    Odense Boldklub             19  6   7   6   23  23  0   25  WDDWD
+7     S     Soenderjyske                19  7   4   8   27  29  -2  25  LLLLD
+8     FCN   Football Club Nordsjaelland 19  5   7   7   28  27  1   22  LDDDW
+9     AAB   Aalborg Boldklub            19  5   7   7   21  28  -7  22  DDLDL
+10    VB    Vejle Baoldklub             19  5   6   8   23  30  -7  21  WDLDL
+11    L     Lyngby Boldklub             19  3   5   11  21  38  -17 14  LLDWW
+12    ACH   Alliance Club Horsens       19  2   5   12  12  31  -19 11  LLDDW
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    20  13  2   5   36  23  13  41  WWLDW
+2     FCM   Football Club Midtjylland   20  12  3   5   30  20  10  39  WWWLL
+3     AGF   Aarhus gymnastikforening    20  10  6   4   33  20  13  36  DWDLW
+4     FCK   Football Club Koebenhavn    20  10  4   6   38  33  5   34  WDDWL
+5     RFC   Randers Football Club       20  8   4   8   28  19  9   28  DDLDL
+6     OB    Odense Boldklub             20  6   7   7   23  25  -2  25  DDWDL
+7     S     Soenderjyske                20  7   4   9   27  30  -3  25  LLLDL
+8     AAB   Aalborg Boldklub            20  6   7   7   22  28  -6  25  DLDLW
+9     VB    Vejle Baoldklub             20  6   6   8   25  30  -5  24  DLDLW
+10    FCN   Football Club Nordsjaelland 20  5   8   7   30  29  1   23  DDDWD
+11    L     Lyngby Boldklub             20  4   5   11  23  39  -16 17  LDWWW
+12    ACH   Alliance Club Horsens       20  2   6   12  14  33  -19 12  LDDWD
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    21  14  2   5   39  23  16  44  WLDWW
+2     FCM   Football Club Midtjylland   21  12  4   5   30  20  10  40  WWLLD
+3     AGF   Aarhus gymnastikforening    21  10  7   4   34  21  13  37  WDLWD
+4     FCK   Football Club Koebenhavn    21  10  5   6   38  33  5   35  DDWLD
+5     RFC   Randers Football Club       21  8   5   8   29  20  9   29  DLDLD
+6     S     Soenderjyske                21  8   4   9   29  30  -1  28  LLDLW
+7     AAB   Aalborg Boldklub            21  7   7   7   24  28  -4  28  LDLWW
+8     FCN   Football Club Nordsjaelland 21  6   8   7   33  29  4   26  DDWDW
+9     OB    Odense Boldklub             21  6   7   8   23  28  -5  25  DWDLL
+10    VB    Vejle Baoldklub             21  6   6   9   25  32  -7  24  LDLWL
+11    L     Lyngby Boldklub             21  4   5   12  23  42  -19 17  DWWWL
+12    ACH   Alliance Club Horsens       21  2   6   13  14  35  -21 12  DDWDL
+
+-----------------------------------------------------------------------------
+
+Name: 3F Superliga
+Pos   abr   Club Name                   G   W   D   L   G+  G-  GD  P   Streak
+1     BIF   Broendby Idraetsforening    22  14  3   5   40  24  16  45  LDWWD
+2     FCM   Football Club Midtjylland   22  13  4   5   35  20  15  43  WLLDW
+3     AGF   Aarhus gymnastikforening    22  10  8   4   35  22  13  38  DLWDD
+4     FCK   Football Club Koebenhavn    22  10  5   7   39  35  4   35  DWLDL
+5     RFC   Randers Football Club       22  9   5   8   31  21  10  32  LDLDW
+6     FCN   Football Club Nordsjaelland 22  7   8   7   35  30  5   29  DWDWW
+7     S     Soenderjyske                22  8   4   10  30  32  -2  28  LDLWL
+8     OB    Odense Boldklub             22  7   7   8   25  28  -3  28  WDLLW
+9     AAB   Aalborg Boldklub            22  7   7   8   24  30  -6  28  DLWWL
+10    VB    Vejle Baoldklub             22  6   6   10  25  37  -12 24  DLWLL
+11    L     Lyngby Boldklub             22  5   5   12  25  43  -18 20  WWWLW
+12    ACH   Alliance Club Horsens       22  2   6   14  15  37  -22 12  DWDLL
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+Name: Kvalifikationsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
+------------------------------------------------------------
+
+Name: mesterskabsspillet
+Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
+
 Name: Kvalifikationsspillet
 Pos   abr   Club Name G   W   D   L   G+  G-  GD  P   Streak
 

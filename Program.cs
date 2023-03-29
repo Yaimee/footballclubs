@@ -2,6 +2,26 @@
 
 
 namespace app{
+    struct Match {
+        public Club homeTeam{ get; set; }
+        public Club awayTeam{ get; set; }
+
+        public int homeClubGoals{ get; set; }
+        public int awayClubGoals{ get; set; }
+
+        public Match(Club homeTeam, int homeClubGoals, Club awayTeam, int awayClubGoals){
+            this.homeTeam = homeTeam;
+            this.awayTeam = awayTeam;
+            this.homeClubGoals = homeClubGoals;
+            this.awayClubGoals = awayClubGoals;
+        }
+        
+
+        public override string ToString()
+        {
+            return $"{homeTeam.abbreviation} {homeClubGoals}-{awayClubGoals} {awayTeam.abbreviation}";
+        }
+    }
     class Program{
         static List<League>? leagueList = new List<League>();
         static List<Club> clubs = new List<Club>();
@@ -40,14 +60,35 @@ namespace app{
 
         static void runRound(List<Match> matches){
             foreach(Match match in matches){
+                string HTAbbreviation = match.homeTeam.abbreviation;
+                string ATAbbreviation = match.awayTeam.abbreviation;
+                Club homeClub = findClub(HTAbbreviation);
+                Club awayClub = findClub(ATAbbreviation);
                 if(match.homeClubGoals == match.awayClubGoals){
-                    //Implement draw
+                    homeClub.gamesDrawn++;
+                    homeClub.points++;
+                    homeClub.goalsFor += match.homeClubGoals;
+                    homeClub.goalsAgainst += match.awayClubGoals;
+                    homeClub.goalDifference = homeClub.goalsFor - homeClub.goalsAgainst;
+                    awayClub.gamesDrawn++;
+                    awayClub.points++;
+                    awayClub.goalsFor += match.awayClubGoals;
+                    awayClub.goalsAgainst += match.homeClubGoals;
+                    awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
                 }
                 else if(match.homeClubGoals > match.awayClubGoals){
-                    //Implement home team win
+                    homeClub.gamesWon++;
+                    homeClub.points += 3;
+                    homeClub.goalsFor += match.homeClubGoals;
+                    homeClub.goalDifference -= homeClub.goalsAgainst;
+                    awayClub.gamesLost++;
+                    awayClub.goalDifference = awayClub.goalsFor - awayClub.goalsAgainst;
+                    awayClub.goalsAgainst += homeClub.goalsFor;
                 }
                 else{
-                    //Implement away team win
+                    homeClub.gamesLost++;
+                    awayClub.gamesWon++;
+                    awayClub.points += 3;
                 }
 
                 //Implement update of all data neccesary
@@ -85,14 +126,8 @@ namespace app{
                 }
             }
 
-            return foundClub;;
+            return foundClub;
         }
-
-
-
-        
-
-
 
         static void initiateLeague(){
             try{

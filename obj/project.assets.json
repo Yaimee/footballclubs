@@ -8,11 +8,25 @@
     "net6.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\rasmu\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\udh12\\.nuget\\packages\\": {}
+>>>>>>> 3bbaa0273fd7633db71f9088a6f7a6f2b7f6fd9b
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\footballclubs.csproj",
+      "projectName": "footballclubs",
+      "projectPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\footballclubs.csproj",
+      "packagesPath": "C:\\Users\\rasmu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rasmu\\OneDrive\\Documents\\footballclubs\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\rasmu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
       "projectUniqueName": "C:\\Users\\udh12\\Desktop\\FootBall\\footballclubs\\footballclubs.csproj",
       "projectName": "footballclubs",
       "projectPath": "C:\\Users\\udh12\\Desktop\\FootBall\\footballclubs\\footballclubs.csproj",
@@ -21,6 +35,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\udh12\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> 3bbaa0273fd7633db71f9088a6f7a6f2b7f6fd9b
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -54,12 +69,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
